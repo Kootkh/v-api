@@ -1,0 +1,5 @@
+proto:
+	@protoc \
+		--proto_path=protobuf "protobuf/api.proto" \
+		--go_out=services/genproto/orders --go_opt=paths=source_relative \
+		--go-grpc_out=services/genproto/orders --go-grpc_opt=paths=source_relative

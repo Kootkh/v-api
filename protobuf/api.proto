@@ -36,3 +36,11 @@ message APIRequest {
 	string name = 1;
 	int32 type = 2;
 }
+
+message APIResponse {
+	// int32 id = 1;								// Уникальный идентификатор пользователя
+	// string name = 2;							// Имя пользователя
+	// string email = 3;						// Электронная почта пользователя
+	// repeated string roles = 4;		// Роли пользователя в системе
+}
+
