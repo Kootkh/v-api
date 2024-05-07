@@ -4,10 +4,14 @@
 // Определение версии синтаксиса ProtoBuf
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
+// import "google/protobuf/timestamp.proto";
 
 // Опционально: указываем пакет (помогает предотвратить конфликты имен в больших проектах)
 //package user;
+package api;
+
+//
+option go_package = "vapi.v1;vapiv1";
 
 // Определение сервиса APIService
 service APIService {
@@ -24,7 +28,7 @@ message GetUserRequest {
 
 // EXAMPLE: Определение ответа, содержащего информацию о пользователе
 message GetUserResponse {
-  User user = 1;        // Данные пользователя
+  string user = 1;        // Данные пользователя
 }
 
 // Определение сообщения APIRequest
